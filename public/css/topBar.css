@@ -1,0 +1,48 @@
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+overflow: hidden;
+background-color: #333;
+display: flex;
+margin: auto;
+}
+.topnav--right{
+    margin-left: auto
+}
+
+.topnav__imagen {
+    width:50px;
+    height: 48px;
+}
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.btn {
+border: none;
+outline: none;
+padding: 10px 16px;
+cursor: pointer;
+}
+
+.active, .btn:hover {
+background-color: #007A33;
+}
+.chat{
+    display:flex;
+    flex-direction:column;
+    height:245px;
+}
+.textarea{
+    resize: none;
+    height: 215px;
+    margin: 18px;
+}
