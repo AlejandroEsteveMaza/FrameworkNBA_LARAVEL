@@ -13,9 +13,9 @@
   ?>
 
   <div class="topnav" id="top">
-    <a class="btn" href="<?= $config["site"]["root"] . "/" ?>"> Inicio </a>
-    <a class="btn" href="<?= $config["site"]["root"] . "/equipo" ?>">Equipo</a>
-    <a class="btn" href="<?= $config["site"]["root"] . "/jugadores" ?>">Jugadores</a>
+    <a class="btn" href="{{asset('/')}}"> Inicio </a>
+    <a class="btn" href="{{asset('/equipo')}}">Equipo</a>
+    <a class="btn" href="{{asset('/jugadores')}}">Jugadores</a>
 
 
     <a href="<?= $config['site']['root'] . "/login" ?>" class="topnav--right">Inicia Sesión</a>

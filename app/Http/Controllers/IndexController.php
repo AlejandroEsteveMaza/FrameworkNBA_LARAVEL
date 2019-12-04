@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 class indexController extends Controller
 {
 
@@ -11,17 +13,28 @@ class indexController extends Controller
     } */
     public function index()
     {
-        return view('portada');
+        return view('inicio');
     }
-    public function peliculas()
+    public function equipo()
     {
-        $peliculas = DB::select('SELECT id, nombre FROM peliculas');
-        dd($peliculas);/* depurar */
-        return view('peliculas')->with('peliculas', $peliculas);
+        return view('equipo');
+    }
+    public function jugadores()
+    {
+        $jugadores = DB::table('jugadores')->select('nombre')->where('Nombre_equipo', 'Celtics')->toSql();
+        return view('jugadores')->with('jugadores', $jugadores);
     }
 
+
+    /*  public function peliculas()
+    {
+        $peliculas = DB::select('SELECT id, nombre FROM peliculas');
+        dd($peliculas);
+        return view('peliculas')->with('peliculas', $peliculas);
+    } */
+
     //querybuilder
-   /*  public function peliculas()
+    /*  public function peliculas()
     {
         $peliculas = DB::table('peliculas')->select('id','nombre')->get();
         return view('peliculas')->with('peliculas', $peliculas);
