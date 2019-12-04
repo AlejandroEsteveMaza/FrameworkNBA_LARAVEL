@@ -20,5 +20,9 @@ Route::get('/peliculas', function () {
 });
 
 Route::get('/peliculas/{idpelicula}', function ($id) {
-    return view('palicula')->with(['idPelicula'=> $id]);
+    return view('palicula')->with(['idPelicula'=> $id]); /* usar with en el controllador al devolver la vista */
 });
+
+/* Route::get('/','IndexController@index');
+Route::get('/peliculas','IndexController@peliculas');
+Route::get('/peliculas/{idpelicula}','PeliculaController'); */

@@ -1,0 +1,1 @@
+<!-- src imagen"{{asset('img/peliculas')}}/{{$peliculas->id}}.jpg" -->
