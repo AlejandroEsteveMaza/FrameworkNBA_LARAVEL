@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('inicio');
 });
+
+Route::get('/peliculas', function () {
+    return view('peliculas');
+});
+
+Route::get('/peliculas/{idpelicula}', function ($id) {
+    return view('palicula')->with(['idPelicula'=> $id]);
+});
